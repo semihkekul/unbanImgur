@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "Imgur Proxied",
+    "name": "UnbanImgur",
     "version": "0.1",
     "background": {
       "scripts": ["background.js"]
@@ -15,9 +15,12 @@
     ],
     "permissions": [
         "webRequest",
-        "*://imgur.com/*",
-        "*://i.imgur.com/*",
-        "*://www.imgur.com/*",
+        "https://imgur.com/*",
+        "http://imgur.com/*",
+        "https://www.imgur.com/*",
+        "http://www.imgur.com/*",
+        "http://i.imgur.com/*",
+        "https://i.imgur.com/*",
         "webRequestBlocking"
       ],
     "browser_action": {
