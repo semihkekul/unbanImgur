@@ -1,36 +1,25 @@
 {
     "manifest_version": 2,
-    "name": "UnbanImgur",
-    "version": "0.1",
+    "name": "unbanimgur",
+    "version": "1.1",
     "background": {
       "scripts": ["background.js"]
     },
-    "content_scripts": [
-      {
-        "matches": [
-          "<all_urls>"
-        ],
-        "js": ["jquery-3.3.1.min.js"]
-      }
-    ],
     "permissions": [
-        "webRequest",
-        "https://imgur.com/*",
-        "http://imgur.com/*",
-        "https://www.imgur.com/*",
-        "http://www.imgur.com/*",
-        "http://i.imgur.com/*",
-        "https://i.imgur.com/*",
-        "webRequestBlocking"
-      ],
+        "*://imgur.com/*",
+        "*://www.imgur.com/*",
+        "*://i.imgur.com/*",
+        "webRequest", "webRequestBlocking", "storage"
+    ],
     "browser_action": {
-      "default_icon": "icon.png"
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
     },
     "icons":
     {
-       "128": "icon.png",
-       "16": "icon.png",
-       "48": "icon.png"
+       "128": "icon_128.png",
+       "16": "icon_16.png",
+       "48": "icon_48.png"
     }
  
   }
